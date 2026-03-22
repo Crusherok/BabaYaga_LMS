@@ -47,7 +47,7 @@ Render's Web Services need a PostgreSQL database.
    - **Build Command**: `npm install; npm run build`
    - **Start Command**: `npm start`
 4. **Environment Variables**:
-   - `NEXT_PUBLIC_API_URL`: (The URL of your `lms-backend` service)
+   - `NEXT_PUBLIC_API_BASE_URL`: (Your backend URL + /api, e.g., `https://lms-backend.onrender.com/api`)
 
 ---
 
