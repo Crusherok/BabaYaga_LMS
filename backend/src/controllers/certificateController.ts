@@ -35,15 +35,24 @@ export const getCertificateStatus = async (req: AuthRequest, res: Response) => {
 
     const user = await prisma.user.findUnique({ where: { id: userId } });
     
+    const enrollment = await prisma.enrollment.findUnique({
+      where: { user_id_subject_id: { user_id: userId, subject_id: subjectId } }
+    });
+    
+    const passedExam = enrollment?.passed_exam || false;
     let unlocked = false;
-    if (completedProgress === totalVideos) {
-      const enrollment = await prisma.enrollment.findUnique({
-        where: { user_id_subject_id: { user_id: userId, subject_id: subjectId } }
-      });
-      unlocked = enrollment?.passed_exam || false;
+    if (completedProgress === totalVideos && totalVideos > 0) {
+      unlocked = passedExam;
     }
 
-    res.json({ unlocked, user, subject });
+    res.json({ 
+      unlocked, 
+      user, 
+      subject,
+      totalVideos,
+      completedVideos: completedProgress,
+      passedExam
+    });
   } catch (error) {
     console.error('Certificate check error:', error);
     res.status(500).json({ error: 'Server error' });

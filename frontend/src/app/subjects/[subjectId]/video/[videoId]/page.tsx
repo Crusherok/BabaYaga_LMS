@@ -41,6 +41,9 @@ export default function VideoPage({ params }: { params: Promise<{ subjectId: str
     await handleProgress(0, true);
     if (video?.next_video_id) {
       router.push(`/subjects/${subjectId}/video/${video.next_video_id}`);
+    } else {
+      // Last video in the course - redirect to exam
+      router.push(`/subjects/${subjectId}/exam`);
     }
   };
 

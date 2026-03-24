@@ -225,7 +225,7 @@ async function main() {
                   title: 'Designing for Scalability',
                   description: 'Load balancers, auto-scaling groups, and stateless services.',
                   // AWS Concepts – freeCodeCamp full AWS intro
-                  youtube_url: 'https://www.youtube.com/watch?v=ulprqHHWlng',
+                  youtube_url: 'https://www.youtube.com/watch?v=3XFODda6YXo',
                   order_index: 2,
                   duration_seconds: 540,
                 },
@@ -249,7 +249,7 @@ async function main() {
                   title: 'Cost Optimization',
                   description: 'Right-sizing, reserved instances, and monitoring spend.',
                   // AWS Cost Optimization – Be a Better Dev
-                  youtube_url: 'https://www.youtube.com/watch?v=WFaECB5sqGk',
+                  youtube_url: 'https://www.youtube.com/watch?v=T-viaT391aQ',
                   order_index: 2,
                   duration_seconds: 420,
                 },
@@ -486,7 +486,7 @@ async function main() {
                   title: 'Node.js Profiling Tools',
                   description: 'Using clinic, flamegraphs, and heap snapshots.',
                   // Node.js Performance – Fireship
-                  youtube_url: 'https://www.youtube.com/watch?v=_0W_822ZU7Y',
+                  youtube_url: 'https://www.youtube.com/watch?v=c4twikSs2Ws',
                   order_index: 1,
                   duration_seconds: 420,
                 },
@@ -713,7 +713,7 @@ async function main() {
                   title: 'Apollo Client with React',
                   description: 'Connecting a React frontend to a GraphQL API using Apollo.',
                   // Apollo Client Tutorial – The Net Ninja
-                  youtube_url: 'https://www.youtube.com/watch?v=mfIqgIKG-C4',
+                  youtube_url: 'https://www.youtube.com/watch?v=YyUWW04HwKY',
                   order_index: 1,
                   duration_seconds: 2700,
                 },
@@ -721,7 +721,7 @@ async function main() {
                   title: 'Full-Stack GraphQL App',
                   description: 'Build a complete app with Apollo Server, Prisma, and React.',
                   // Full Stack GraphQL – Fireship
-                  youtube_url: 'https://www.youtube.com/watch?v=4GpJSF7f_Z4',
+                  youtube_url: 'https://www.youtube.com/watch?v=BNYwj0ZvU1U',
                   order_index: 2,
                   duration_seconds: 3000,
                 },
@@ -789,7 +789,7 @@ async function main() {
                   title: 'Fetching Data & AsyncStorage',
                   description: 'REST API calls, loading states, and offline data persistence.',
                   // React Native AsyncStorage – Academind
-                  youtube_url: 'https://www.youtube.com/watch?v=iiCHYODCgcE',
+                  youtube_url: 'https://www.youtube.com/watch?v=PRGHWgTydyQ',
                   order_index: 2,
                   duration_seconds: 2400,
                 },

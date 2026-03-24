@@ -84,12 +84,30 @@ export default function CertificatePage({ params }: { params: Promise<{ subjectI
                   <Lock size={40} className="text-red-400" />
                 </div>
                 <h1 className="text-3xl lg:text-5xl font-black text-white mb-4">Certificate Locked</h1>
-                <p className="text-gray-400 text-lg max-w-lg mx-auto leading-relaxed mb-8">
-                  You must complete all 100% of the course videos to unlock your official certificate of completion.
-                </p>
-                <Link href={`/subjects/${subjectId}`} className="inline-flex bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 px-8 rounded-2xl transition-all shadow-lg shadow-indigo-500/20">
-                  Continue Learning
-                </Link>
+                
+                {certData?.completedVideos === certData?.totalVideos && certData?.totalVideos > 0 ? (
+                  <>
+                    <p className="text-gray-400 text-lg max-w-lg mx-auto leading-relaxed mb-8">
+                      Great job! You've watched all the videos. Now, you must pass the AI-powered certification exam to unlock your certificate.
+                    </p>
+                    <Link href={`/subjects/${subjectId}/exam`} className="inline-flex bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 px-8 rounded-2xl transition-all shadow-lg shadow-indigo-500/20">
+                      Take the Exam
+                    </Link>
+                  </>
+                ) : (
+                  <>
+                    <p className="text-gray-400 text-lg max-w-lg mx-auto leading-relaxed mb-8">
+                      You must complete 100% of the course videos and pass the AI exam to unlock your official certificate.
+                      <br />
+                      <span className="text-indigo-400 font-bold mt-2 block">
+                        Progress: {certData?.completedVideos || 0} / {certData?.totalVideos || 0} videos
+                      </span>
+                    </p>
+                    <Link href={`/subjects/${subjectId}`} className="inline-flex bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-2xl transition-all">
+                      Continue Learning
+                    </Link>
+                  </>
+                )}
               </div>
             ) : (
               <div className="animate-in fade-in slide-in-from-bottom-8 duration-700">
